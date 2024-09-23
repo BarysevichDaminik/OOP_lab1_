@@ -1,0 +1,43 @@
+﻿<Window x:Class="OOP_lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_lab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Кнопки Start и Stop -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+            <Button x:Name="startButton" Content="Start" Margin="5" Width="100" Click="startButton_Click" />
+            <Button x:Name="stopButton" Content="Stop" Margin="5" Width="100" Click="stopButton_Click" />
+        </StackPanel>
+
+        <!-- Заголовки -->
+        <TextBlock Text="Order Place" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" />
+        <TextBlock Text="Tasks" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" />
+        <TextBlock Text="Waiting Area" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" />
+
+        <!-- ListBox -->
+        <ListBox x:Name="orderPlaceListBox" Grid.Row="2" Grid.Column="0" />
+        <ListBox x:Name="tasksListBox" Grid.Row="2" Grid.Column="1" />
+        <ListBox x:Name="waitingAreaListBox" Grid.Row="2" Grid.Column="2" />
+
+        <!-- Лейблы -->
+        <Label x:Name="label1" Content="0" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" />
+        <Label x:Name="label2" Content="Label 2" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" />
+        <Label x:Name="label3" Content="Label 3" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" />
+    </Grid>
+</Window>

@@ -30,7 +30,7 @@
             while (!token.IsCancellationRequested)
             {
                 customerAddedEvent.WaitOne();
-                await System.Threading.Tasks.Task.Delay(1000);
+                await System.Threading.Tasks.Task.Delay(4000);
                 Customer customer = lineIn.Dequeue();
                 window.Dequeue(0);
                 customer.task = new();

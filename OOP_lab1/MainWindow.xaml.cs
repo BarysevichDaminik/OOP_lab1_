@@ -16,7 +16,7 @@ namespace OOP_lab1
         ObservableCollection<Row> tasks;
         ObservableCollection<Row> waitingArea;
 
-        SetupEnvironment setupEnvironment;
+        public SetupEnvironment setupEnvironment;
 
         public MainWindow()
         {

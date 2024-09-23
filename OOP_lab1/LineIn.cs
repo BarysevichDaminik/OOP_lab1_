@@ -9,18 +9,19 @@ namespace OOP_lab1
         BlockingCollection<Customer> customers;
         MainWindow window;
         bool _isActive;
-        public LineIn(MainWindow window, bool isActive) => (this.customers, this.isActive, this.window) = (new(), isActive, window);
+        public LineIn(MainWindow window, bool isActive) => (this.customers, this.isActive, this.window) = 
+            (new(), isActive, window);
         async void StartAdding()
         {
             while (_isActive)
             {
                 Customer _customer = new() { id = Guid.NewGuid(), name = $"Customer {++MainWindow.CustomersCount}" };
 
-                Label label1 = (Label)window.FindName("label1");
                 customers.Add(_customer);
                 window.Enqueue(0, _customer.name);
                 OnCreating(new CustomerAddedEventArgs());
-                await System.Threading.Tasks.Task.Delay(1000);
+                if (customers.Count == 20) { window.setupEnvironment.Stop(); window.orderPlaceListBox.Items.Clear();}
+                await System.Threading.Tasks.Task.Delay(400);
             }
         }
         public bool isActive 

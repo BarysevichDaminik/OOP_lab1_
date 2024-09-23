@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_lab1
 {
-    internal sealed class SetupEnvironment
+    public sealed class SetupEnvironment
     {
         LineIn lineIn;
         TaskContainer taskContainer;

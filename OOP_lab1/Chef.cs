@@ -42,7 +42,7 @@ namespace OOP_lab1
         async System.Threading.Tasks.Task DoTask()
         {
             Task _task = ExcludeTask();
-            await System.Threading.Tasks.Task.Delay(rand.Next(5000));
+            await System.Threading.Tasks.Task.Delay(2000);
             window.Dequeue(1, _task.name);
             Customer customer = listOfWaiters.Find(_task);
             window.Dequeue(2, customer.name);
